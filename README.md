@@ -1,54 +1,50 @@
 # 🎬 Movies API
 
-**Movies API** is a Spring Boot backend project built to explore **role-based data access** and compare different persistence strategies while following a **clean, layered architecture**.
+**Movies API** is a Spring Boot backend application that manages movie data stored in a relational database and exposes it through a role-based REST API.
 
-The application retrieves movie data from a relational database and adapts the information returned depending on the requesting role (**USER** vs **ADMIN**).
+The system differentiates between USER and ADMIN roles, returning different levels of information depending on access permissions.
+
+The main goal of this project is to explore and compare two persistence approaches within the same backend architecture: JPA (ORM-based access) and JDBC (direct SQL queries).
 
 ---
 
-## 🏗️ Clean Architecture Approach
+## 🏗️ Architecture
 
-The project is intentionally structured using a **layered design** to ensure separation of concerns, maintainability, and scalability:
+The application follows a layered architecture to ensure separation of concerns:
 Controller → Service → Repository → Database
 
 - **Controller Layer**  
-  Handles HTTP requests and maps them to application use cases.
+  Handles HTTP requests and exposes REST endpoints.
 
 - **Service Layer**  
-  Contains the business logic and decides how data should be accessed depending on the user role.
+  Contains the business logic and applies role-based rules.
 
 - **Repository Layer**  
-  Implements two alternative persistence strategies:
+  Implements two two persistence strategies (JPA and JDBC):
   - **JPA** — ORM-based, entity-driven access.
   - **JDBC** — Direct SQL for fine-grained control and flexibility.
 
-This dual approach allows evaluating trade-offs between abstraction and performance while keeping the architecture clean and modular.
-
 ---
 
-## 🎯 Project Goals
+## 🎯 Key Features
 
-- Demonstrate how **different persistence mechanisms can coexist** in the same application.
-- Explore **role-aware data delivery** and query specialization.
-- Apply **Spring Boot best practices** within a maintainable, production-style structure.
-- Reinforce architectural principles such as **separation of concerns** and **testable design**.
+- Role-based access control (USER / ADMIN)
+- Movie data retrieval and management
+- Dual persistence implementation (JPA vs JDBC)
+- Separation between business logic and data access
+- RESTful API design with Spring Boot
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Java  
-- Spring Boot  
-- Spring Data JPA  
-- JDBC Template  
-- MySQL  
-- Maven  
+Java · Spring Boot · Spring Data JPA · JDBC Template · MySQL · Maven
 
 ---
 
 ## 🚀 Run the Application
 
-Configure your database in `application.properties`, then run:
+Configure your database in `application.properties` and run:
 
 ```bash
 mvn spring-boot:run
