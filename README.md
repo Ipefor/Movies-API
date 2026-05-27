@@ -1,4 +1,4 @@
-# 📚 Movies API
+#  🎬 Movies API
 
 **Movies API** is a Spring Boot backend application that manages movie data stored in a relational database and exposes it through a role-based REST API.
 
