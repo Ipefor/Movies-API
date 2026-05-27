@@ -1,6 +1,6 @@
-# 📚 Books API
+# 📚 Movies API
 
-**Books API** is a Spring Boot backend application that manages book data stored in a relational database and exposes it through a role-based REST API.
+**Movies API** is a Spring Boot backend application that manages movie data stored in a relational database and exposes it through a role-based REST API.
 
 The system differentiates between USER and ADMIN roles, returning different levels of information depending on access permissions.
 
