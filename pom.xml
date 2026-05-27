@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.3</version>
+		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.mislata</groupId>
-	<artifactId>pruebaLombok</artifactId>
+	<groupId>com</groupId>
+	<artifactId>movies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pruebaLombok</name>
-	<description>Demo project for Spring Boot</description>
+	<name>movies</name>
+	<description>REST API for books management built with Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -28,8 +28,6 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
-		<org.mapstruct.version>1.6.2</org.mapstruct.version>
-		<lombok-mapstruck-bindings.version>0.2.0</lombok-mapstruck-bindings.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -60,10 +58,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -78,38 +72,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>1.8</source> <!-- depending on your project -->
-					<target>1.8</target> <!-- depending on your project -->
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>${org.mapstruct.version}</version>
-						</path>
-						<path>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>${org.mapstruct.version}</version>
-						</path>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-							<version>${lombok.version}</version>
-						</path>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok-mapstruct-binding</artifactId>
-							<version>${lombok-mapstruck-bindings.version}</version>
-						</path>
-						<!-- other annotation processors -->
-					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 		</plugins>
